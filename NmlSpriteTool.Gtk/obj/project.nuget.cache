@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "mMFIEcESIqfp3e2gqfG9JaEQe1vnm62yQJPKa0ry5IuZ7BHeMkokJEMHjiywZRqDzRW5btp9Jp8B1fYem/2bGQ==",
+  "success": true,
+  "projectFilePath": "D:\\GitRepos\\NmlSpriteTool\\NmlSpriteTool\\NmlSpriteTool.Gtk\\NmlSpriteTool.Gtk.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nutzer\\.nuget\\packages\\atksharp\\3.24.24.38\\atksharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\cairosharp\\3.24.24.38\\cairosharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\eto.forms\\2.7.5\\eto.forms.2.7.5.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\eto.platform.gtk\\2.7.5\\eto.platform.gtk.2.7.5.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\gdksharp\\3.24.24.38\\gdksharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\giosharp\\3.24.24.38\\giosharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\glibsharp\\3.24.24.38\\glibsharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\gtksharp\\3.24.24.38\\gtksharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\magick.net-q8-anycpu\\13.1.0\\magick.net-q8-anycpu.13.1.0.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\magick.net.core\\13.1.0\\magick.net.core.13.1.0.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\pangosharp\\3.24.24.38\\pangosharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}

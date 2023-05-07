@@ -1,0 +1,115 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "NmlSpriteTool/1.0.0": {
+        "dependencies": {
+          "Eto.Forms": "2.7.5",
+          "Magick.NET-Q8-AnyCPU": "13.1.0",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "NmlSpriteTool.dll": {}
+        }
+      },
+      "Eto.Forms/2.7.5": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Eto.dll": {
+            "assemblyVersion": "2.7.0.0",
+            "fileVersion": "2.7.8511.25678"
+          }
+        }
+      },
+      "Magick.NET-Q8-AnyCPU/13.1.0": {
+        "dependencies": {
+          "Magick.NET.Core": "13.1.0"
+        },
+        "runtime": {
+          "lib/netstandard20/Magick.NET-Q8-AnyCPU.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Magick.NET.Core/13.1.0": {
+        "runtime": {
+          "lib/netstandard20/Magick.NET.Core.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NmlSpriteTool/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Eto.Forms/2.7.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VDmkPBpETRm5UK++N2f4lIBPJFc2FIYevM63j/w71NOTMhgOSF7sjdWrl54V8zb6IseXQWCv9sXzAgSH5YbMag==",
+      "path": "eto.forms/2.7.5",
+      "hashPath": "eto.forms.2.7.5.nupkg.sha512"
+    },
+    "Magick.NET-Q8-AnyCPU/13.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qr33tVXgW6ID7+B3tZdYTq2bYHefcgx1s0x1+OKulb5M94TcVryq+Wk6fYh2chpQ2pE+d2iYKqkIn6dHXmwS4g==",
+      "path": "magick.net-q8-anycpu/13.1.0",
+      "hashPath": "magick.net-q8-anycpu.13.1.0.nupkg.sha512"
+    },
+    "Magick.NET.Core/13.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R5WBgL7JlLoWIlfI4OoSE8qV3M5WyBiXt56FBfR+8N4lvc/FD1gv/ETMIslKs1CffVZDYjKrEWIqj9yvk6tHIA==",
+      "path": "magick.net.core/13.1.0",
+      "hashPath": "magick.net.core.13.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+      "path": "system.componentmodel.annotations/5.0.0",
+      "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
+    }
+  }
+}

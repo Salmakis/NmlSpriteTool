@@ -1,0 +1,655 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Eto.Forms/2.7.5": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Eto.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Eto.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Eto.Platform.Mac64/2.7.5": {
+        "type": "package",
+        "dependencies": {
+          "Eto.Forms": "2.7.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/Eto.Mac64.dll": {},
+          "lib/netstandard2.0/MonoMac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Eto.Mac64.dll": {},
+          "lib/netstandard2.0/MonoMac.dll": {}
+        },
+        "build": {
+          "build/Eto.Platform.Mac64.props": {},
+          "build/Eto.Platform.Mac64.targets": {}
+        }
+      },
+      "Magick.NET-Q8-AnyCPU/13.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Magick.NET.Core": "13.1.0"
+        },
+        "compile": {
+          "lib/netstandard21/Magick.NET-Q8-AnyCPU.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET-Q8-AnyCPU.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/netstandard20/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/Magick.Native-Q8-arm64.dll.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-musl-x64/native/Magick.Native-Q8-x64.dll.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/Magick.Native-Q8-x64.dll.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-arm64/native/Magick.Native-Q8-arm64.dll.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/Magick.Native-Q8-x64.dll.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-arm64/native/Magick.Native-Q8-arm64.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/Magick.Native-Q8-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/Magick.Native-Q8-x86.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Magick.NET.Core/13.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard21/Magick.NET.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NmlSpriteTool/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Eto.Forms": "2.7.5",
+          "Magick.NET-Q8-AnyCPU": "13.1.0"
+        },
+        "compile": {
+          "bin/placeholder/NmlSpriteTool.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NmlSpriteTool.dll": {}
+        }
+      }
+    },
+    "net6.0/osx-arm64": {
+      "Eto.Forms/2.7.5": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Eto.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Eto.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Eto.Platform.Mac64/2.7.5": {
+        "type": "package",
+        "dependencies": {
+          "Eto.Forms": "2.7.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/Eto.Mac64.dll": {},
+          "lib/netstandard2.0/MonoMac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Eto.Mac64.dll": {},
+          "lib/netstandard2.0/MonoMac.dll": {}
+        },
+        "build": {
+          "build/Eto.Platform.Mac64.props": {},
+          "build/Eto.Platform.Mac64.targets": {}
+        }
+      },
+      "Magick.NET-Q8-AnyCPU/13.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Magick.NET.Core": "13.1.0"
+        },
+        "compile": {
+          "lib/netstandard21/Magick.NET-Q8-AnyCPU.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET-Q8-AnyCPU.dll": {
+            "related": ".xml"
+          }
+        },
+        "native": {
+          "runtimes/osx-arm64/native/Magick.Native-Q8-arm64.dll.dylib": {}
+        },
+        "build": {
+          "build/netstandard20/_._": {}
+        }
+      },
+      "Magick.NET.Core/13.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard21/Magick.NET.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NmlSpriteTool/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Eto.Forms": "2.7.5",
+          "Magick.NET-Q8-AnyCPU": "13.1.0"
+        },
+        "compile": {
+          "bin/placeholder/NmlSpriteTool.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NmlSpriteTool.dll": {}
+        }
+      }
+    },
+    "net6.0/osx-x64": {
+      "Eto.Forms/2.7.5": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Eto.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Eto.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Eto.Platform.Mac64/2.7.5": {
+        "type": "package",
+        "dependencies": {
+          "Eto.Forms": "2.7.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/Eto.Mac64.dll": {},
+          "lib/netstandard2.0/MonoMac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Eto.Mac64.dll": {},
+          "lib/netstandard2.0/MonoMac.dll": {}
+        },
+        "build": {
+          "build/Eto.Platform.Mac64.props": {},
+          "build/Eto.Platform.Mac64.targets": {}
+        }
+      },
+      "Magick.NET-Q8-AnyCPU/13.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Magick.NET.Core": "13.1.0"
+        },
+        "compile": {
+          "lib/netstandard21/Magick.NET-Q8-AnyCPU.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET-Q8-AnyCPU.dll": {
+            "related": ".xml"
+          }
+        },
+        "native": {
+          "runtimes/osx-x64/native/Magick.Native-Q8-x64.dll.dylib": {}
+        },
+        "build": {
+          "build/netstandard20/_._": {}
+        }
+      },
+      "Magick.NET.Core/13.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard21/Magick.NET.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NmlSpriteTool/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Eto.Forms": "2.7.5",
+          "Magick.NET-Q8-AnyCPU": "13.1.0"
+        },
+        "compile": {
+          "bin/placeholder/NmlSpriteTool.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NmlSpriteTool.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Eto.Forms/2.7.5": {
+      "sha512": "VDmkPBpETRm5UK++N2f4lIBPJFc2FIYevM63j/w71NOTMhgOSF7sjdWrl54V8zb6IseXQWCv9sXzAgSH5YbMag==",
+      "type": "package",
+      "path": "eto.forms/2.7.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Eto-LICENSE.txt",
+        "build/Eto.Forms.targets",
+        "eto.forms.2.7.5.nupkg.sha512",
+        "eto.forms.nuspec",
+        "lib/netstandard2.0/Eto.dll",
+        "lib/netstandard2.0/Eto.xml",
+        "sdk/Sdk.props",
+        "sdk/Sdk.targets",
+        "sdk/Xamarin.Mac.targets"
+      ]
+    },
+    "Eto.Platform.Mac64/2.7.5": {
+      "sha512": "fp6NV134Ox0blD2Wtchmw2+Xw4TyliotPasDDtdTE1n6FyD2Wyjo1G/Pz7gy1/ZS8oSitmmIebPnqRe5quidow==",
+      "type": "package",
+      "path": "eto.platform.mac64/2.7.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Eto-LICENSE.txt",
+        "MonoMac-LICENSE.txt",
+        "build/BundleDotNetCore.targets",
+        "build/BundleMono.targets",
+        "build/CodeSign.entitlements",
+        "build/CodeSign.targets",
+        "build/Dmg.background.png",
+        "build/Dmg.targets",
+        "build/Eto.Platform.Mac64.props",
+        "build/Eto.Platform.Mac64.targets",
+        "build/Icon.icns",
+        "build/Info.plist",
+        "build/Launcher64",
+        "build/MSBuildTaskHelper.props",
+        "build/Notarization.targets",
+        "build/README.txt",
+        "build/RunConfiguration.Default.targets",
+        "build/RunConfiguration.Mac.targets",
+        "eto.platform.mac64.2.7.5.nupkg.sha512",
+        "eto.platform.mac64.nuspec",
+        "lib/netstandard2.0/Eto.Mac64.dll",
+        "lib/netstandard2.0/MonoMac.dll"
+      ]
+    },
+    "Magick.NET-Q8-AnyCPU/13.1.0": {
+      "sha512": "Qr33tVXgW6ID7+B3tZdYTq2bYHefcgx1s0x1+OKulb5M94TcVryq+Wk6fYh2chpQ2pE+d2iYKqkIn6dHXmwS4g==",
+      "type": "package",
+      "path": "magick.net-q8-anycpu/13.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Magick.NET.icon.png",
+        "Notice.linux-musl.txt",
+        "Notice.linux.txt",
+        "Notice.osx.txt",
+        "Notice.win.txt",
+        "build/netstandard20/Magick.NET-Q8-AnyCPU.targets",
+        "docs/Readme.md",
+        "lib/netstandard20/Magick.NET-Q8-AnyCPU.dll",
+        "lib/netstandard20/Magick.NET-Q8-AnyCPU.xml",
+        "lib/netstandard21/Magick.NET-Q8-AnyCPU.dll",
+        "lib/netstandard21/Magick.NET-Q8-AnyCPU.xml",
+        "magick.net-q8-anycpu.13.1.0.nupkg.sha512",
+        "magick.net-q8-anycpu.nuspec",
+        "runtimes/linux-arm64/native/Magick.Native-Q8-arm64.dll.so",
+        "runtimes/linux-musl-x64/native/Magick.Native-Q8-x64.dll.so",
+        "runtimes/linux-x64/native/Magick.Native-Q8-x64.dll.so",
+        "runtimes/osx-arm64/native/Magick.Native-Q8-arm64.dll.dylib",
+        "runtimes/osx-x64/native/Magick.Native-Q8-x64.dll.dylib",
+        "runtimes/win-arm64/native/Magick.Native-Q8-arm64.dll",
+        "runtimes/win-x64/native/Magick.Native-Q8-x64.dll",
+        "runtimes/win-x86/native/Magick.Native-Q8-x86.dll"
+      ]
+    },
+    "Magick.NET.Core/13.1.0": {
+      "sha512": "R5WBgL7JlLoWIlfI4OoSE8qV3M5WyBiXt56FBfR+8N4lvc/FD1gv/ETMIslKs1CffVZDYjKrEWIqj9yvk6tHIA==",
+      "type": "package",
+      "path": "magick.net.core/13.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Copyright.txt",
+        "Magick.NET.icon.png",
+        "docs/Readme.md",
+        "lib/netstandard20/Magick.NET.Core.dll",
+        "lib/netstandard20/Magick.NET.Core.xml",
+        "lib/netstandard21/Magick.NET.Core.dll",
+        "lib/netstandard21/Magick.NET.Core.xml",
+        "magick.net.core.13.1.0.nupkg.sha512",
+        "magick.net.core.nuspec"
+      ]
+    },
+    "System.ComponentModel.Annotations/5.0.0": {
+      "sha512": "dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+      "type": "package",
+      "path": "system.componentmodel.annotations/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net461/System.ComponentModel.Annotations.dll",
+        "lib/netcore50/System.ComponentModel.Annotations.dll",
+        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "lib/portable-net45+win8/_._",
+        "lib/win8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net461/System.ComponentModel.Annotations.dll",
+        "ref/net461/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/System.ComponentModel.Annotations.dll",
+        "ref/netcore50/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "ref/portable-net45+win8/_._",
+        "ref/win8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.annotations.5.0.0.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "NmlSpriteTool/1.0.0": {
+      "type": "project",
+      "path": "../NmlSpriteTool/NmlSpriteTool.csproj",
+      "msbuildProject": "../NmlSpriteTool/NmlSpriteTool.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Eto.Platform.Mac64 >= 2.7.5",
+      "NmlSpriteTool >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Nutzer\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitRepos\\NmlSpriteTool\\NmlSpriteTool\\NmlSpriteTool.Mac\\NmlSpriteTool.Mac.csproj",
+      "projectName": "NmlSpriteTool.Mac",
+      "projectPath": "D:\\GitRepos\\NmlSpriteTool\\NmlSpriteTool\\NmlSpriteTool.Mac\\NmlSpriteTool.Mac.csproj",
+      "packagesPath": "C:\\Users\\Nutzer\\.nuget\\packages\\",
+      "outputPath": "D:\\GitRepos\\NmlSpriteTool\\NmlSpriteTool\\NmlSpriteTool.Mac\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Nutzer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\GitRepos\\NmlSpriteTool\\NmlSpriteTool\\NmlSpriteTool\\NmlSpriteTool.csproj": {
+              "projectPath": "D:\\GitRepos\\NmlSpriteTool\\NmlSpriteTool\\NmlSpriteTool\\NmlSpriteTool.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Eto.Platform.Mac64": {
+            "target": "Package",
+            "version": "[2.7.5, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.osx-arm64",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.osx-x64",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-x64",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.osx-arm64",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.osx-x64",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.13, 6.0.13]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "osx-arm64": {
+        "#import": []
+      },
+      "osx-x64": {
+        "#import": []
+      }
+    }
+  }
+}

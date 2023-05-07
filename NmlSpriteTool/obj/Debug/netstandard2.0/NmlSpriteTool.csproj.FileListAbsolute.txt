@@ -1,0 +1,10 @@
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\bin\Debug\netstandard2.0\NmlSpriteTool.deps.json
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\bin\Debug\netstandard2.0\NmlSpriteTool.dll
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\bin\Debug\netstandard2.0\NmlSpriteTool.pdb
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\obj\Debug\netstandard2.0\NmlSpriteTool.csproj.AssemblyReference.cache
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\obj\Debug\netstandard2.0\NmlSpriteTool.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\obj\Debug\netstandard2.0\NmlSpriteTool.AssemblyInfoInputs.cache
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\obj\Debug\netstandard2.0\NmlSpriteTool.AssemblyInfo.cs
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\obj\Debug\netstandard2.0\NmlSpriteTool.csproj.CoreCompileInputs.cache
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\obj\Debug\netstandard2.0\NmlSpriteTool.dll
+D:\GitRepos\NmlSpriteTool\NmlSpriteTool\NmlSpriteTool\obj\Debug\netstandard2.0\NmlSpriteTool.pdb

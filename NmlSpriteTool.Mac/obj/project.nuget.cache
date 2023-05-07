@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "drSXa8eFSYoJgbN1MvOSpkVeGoEhEy5QfscQvt7wSd2QhUuu7B++HFXI1BAb1b3iiO2TF5xP+Yvnh4Ciq77DNg==",
+  "success": true,
+  "projectFilePath": "D:\\GitRepos\\NmlSpriteTool\\NmlSpriteTool\\NmlSpriteTool.Mac\\NmlSpriteTool.Mac.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nutzer\\.nuget\\packages\\eto.forms\\2.7.5\\eto.forms.2.7.5.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\eto.platform.mac64\\2.7.5\\eto.platform.mac64.2.7.5.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\magick.net-q8-anycpu\\13.1.0\\magick.net-q8-anycpu.13.1.0.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\magick.net.core\\13.1.0\\magick.net.core.13.1.0.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.netcore.app.runtime.osx-x64\\6.0.13\\microsoft.netcore.app.runtime.osx-x64.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.netcore.app.runtime.osx-arm64\\6.0.13\\microsoft.netcore.app.runtime.osx-arm64.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.osx-x64\\6.0.13\\microsoft.aspnetcore.app.runtime.osx-x64.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.osx-arm64\\6.0.13\\microsoft.aspnetcore.app.runtime.osx-arm64.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.netcore.app.host.osx-x64\\6.0.13\\microsoft.netcore.app.host.osx-x64.6.0.13.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\microsoft.netcore.app.host.osx-arm64\\6.0.13\\microsoft.netcore.app.host.osx-arm64.6.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
