@@ -14,11 +14,13 @@ namespace NmlSpriteTool {
 		private static readonly string txtSelectADirectory = "<select a directory>";
 		private static readonly string txtSelectFolderWithImages = "Select Folder with images";
 		private static readonly string txtReload = "Reload";
+		
+		private ImageRenderer imageRenderer;
 
 		private ListBox imageFileList;
 		private ImageInfoPanel imageInfoPanel;
 
-		private static Dictionary<string, MagickImage> imageMap = new Dictionary<string, MagickImage>();
+		private static Dictionary<string, RawImageData> imageMap = new Dictionary<string, RawImageData>();
 
 		public MainForm()
 		{
@@ -58,12 +60,12 @@ namespace NmlSpriteTool {
 			{
 				return;
 			}
-			MagickImage img;
+			RawImageData rawImage;
 			if (!imageMap.ContainsKey(fullfilePath))
 			{
 				try
 				{
-					img = new MagickImage(new FileInfo(fullfilePath));
+					rawImage = new RawImageData(new MagickImage(new FileInfo(fullfilePath)));
 				}
 				catch (Exception e)
 				{
@@ -71,13 +73,13 @@ namespace NmlSpriteTool {
 					MessageBox.Show("Image could not be loaded\n" + e.Message);
 					return;
 				}
-				imageMap.Add(fullfilePath, img);
+				imageMap.Add(fullfilePath, rawImage);
 			}
 			else
 			{
-				img = imageMap[fullfilePath];
+				rawImage = imageMap[fullfilePath];
 			}
-			this.imageInfoPanel.SetImage(img);
+			this.imageInfoPanel.SetImage(rawImage);
 		}
 		private void LoadImagesFromWorkDir()
 		{

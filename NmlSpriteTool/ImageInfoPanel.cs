@@ -6,13 +6,14 @@ namespace NmlSpriteTool {
 	public class ImageInfoPanel : DynamicLayout {
 		private Label imageInfo = new Label();
 		private ImageView paletteImageView;
-		private ImageView currentImageView;
+		private ImageRenderer imageRenderer;
 		private DynamicGroup palletteGroup;
 
 		public ImageInfoPanel()
 		{
 			this.paletteImageView = new ImageView();
-			this.currentImageView = new ImageView();
+			this.imageRenderer    = new ImageRenderer();
+			this.imageRenderer.SetSize(new Size(100, 100));
 			// @formatter:off
 			BeginVertical();
 				BeginGroup("Meta");
@@ -21,8 +22,8 @@ namespace NmlSpriteTool {
 				palletteGroup = BeginGroup("Colors");
 					Add(paletteImageView);
 				EndGroup();
-				palletteGroup = BeginGroup("ImageGroup");
-					Add(currentImageView);
+				BeginGroup("ImageGroup");
+					Add(imageRenderer.imageView);
 				EndGroup();
 			EndVertical();
 			// @formatter:on
@@ -33,25 +34,22 @@ namespace NmlSpriteTool {
 			imageInfo.Text           = "no Image selected";
 			palletteGroup.Visible    = false;
 			paletteImageView.Visible = false;
-			currentImageView.Visible = false;
 		}
 
-		public void SetImage(MagickImage image)
+		public void SetImage(RawImageData rawImage)
 		{
-			this.imageInfo.Text         = $"Size: {image.Width},{image.Height} colorMode:{image.ColorType.ToString()}";
-			this.currentImageView.Image = new Bitmap(image.FileName);
-			if (image.ColorType == ColorType.Palette || image.ColorType == ColorType.PaletteAlpha)
+			this.imageInfo.Text = $"Size: {rawImage.Width},{rawImage.Height}";
+			if (rawImage.isIndexed)
 			{
-				this.imageInfo.Text += $" colors:{image.ColormapSize}";
-				this.RenderPalette(image);
+				this.imageInfo.Text += $" colors:{rawImage.PaletteColorCount.ToString()}";
+				this.RenderPalette(rawImage);
+				this.imageRenderer.SetImageAndRepaint(rawImage);
 				paletteImageView.Visible   = true;
 				this.palletteGroup.Visible = true;
-				currentImageView.Visible   = true;
 			}
 			else
 			{
 				this.imageInfo.Text      += $" colors:not indexed!";
-				currentImageView.Visible =  true;
 				palletteGroup.Visible    =  false;
 				paletteImageView.Visible =  false;
 			}
@@ -66,23 +64,23 @@ namespace NmlSpriteTool {
 //			this.paletteImageView.Image = paletteImage;
 		}
 
-		private void RenderPalette(MagickImage image, int size = 4)
+		private void RenderPalette(RawImageData rawImage, int size = 8)
 		{
-			Bitmap paletteImage = new Bitmap(16 * 4, 16 * 4, PixelFormat.Format32bppRgb);
+			Bitmap paletteImage = new Bitmap(16 * size, 16 * size, PixelFormat.Format32bppRgb);
 			Graphics gfx = new Graphics(paletteImage);
 			gfx.Clear(Color.FromArgb(0, 0, 0, 0));
 			int y = 0;
 			int x = 0;
-			for (int i = 1; i < image.ColormapSize; i++)
+			for (int i = 1; i < rawImage.PaletteColorCount; i++)
 			{
-				IMagickColor<byte> color = image.GetColormapColor(i);
+				int color = rawImage.GetPaletteColor(i);
 				x += size;
 				if (i % 16 == 0)
 				{
 					x =  0;
 					y += size;
 				}
-				gfx.FillRectangle(Color.FromPremultipliedArgb(color.R, color.G, color.B, 255), x, y, size, size);
+				gfx.FillRectangle(Color.FromPremultipliedArgb(color), x, y, size, size);
 			}
 			gfx.Flush();
 
