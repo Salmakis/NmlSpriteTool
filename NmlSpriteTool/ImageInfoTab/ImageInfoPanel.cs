@@ -1,4 +1,5 @@
-﻿using Eto.Drawing;
+﻿using System;
+using Eto.Drawing;
 using Eto.Forms;
 using ImageMagick;
 
@@ -7,23 +8,23 @@ namespace NmlSpriteTool {
 		private Label imageInfo = new Label();
 		private ImageView paletteImageView;
 		private ImageRenderer imageRenderer;
-		private DynamicGroup palletteGroup;
+		private readonly DynamicGroup palletteGroup;
+		private readonly DynamicGroup imageGroup;
 
 		public ImageInfoPanel()
 		{
 			this.paletteImageView = new ImageView();
 			this.imageRenderer    = new ImageRenderer();
-			this.imageRenderer.SetSize(new Size(100, 100));
 			// @formatter:off
 			BeginVertical();
 				BeginGroup("Meta");
 						Add(imageInfo);
 				EndGroup();
-				palletteGroup = BeginGroup("Colors");
+					palletteGroup = BeginGroup("Colors");
 					Add(paletteImageView);
 				EndGroup();
-				BeginGroup("ImageGroup");
-					Add(imageRenderer.imageView);
+					imageGroup = BeginGroup("Image Preview");
+					Add(imageRenderer.imageView,true, true);
 				EndGroup();
 			EndVertical();
 			// @formatter:on
@@ -38,20 +39,31 @@ namespace NmlSpriteTool {
 
 		public void SetImage(RawImageData rawImage)
 		{
-			this.imageInfo.Text = $"Size: {rawImage.Width},{rawImage.Height}";
-			if (rawImage.isIndexed)
+			switch (rawImage.imageType)
 			{
-				this.imageInfo.Text += $" colors:{rawImage.PaletteColorCount.ToString()}";
-				this.RenderPalette(rawImage);
-				this.imageRenderer.SetImageAndRepaint(rawImage);
-				paletteImageView.Visible   = true;
-				this.palletteGroup.Visible = true;
-			}
-			else
-			{
-				this.imageInfo.Text      += $" colors:not indexed!";
-				palletteGroup.Visible    =  false;
-				paletteImageView.Visible =  false;
+				case RawImageData.ImageType.Invalid:
+					this.imageInfo.Text      = $"Invalid image / wrong format / not readable";
+					palletteGroup.Visible    = false;
+					paletteImageView.Visible = false;
+					this.imageRenderer.SetImageAndRepaint(rawImage);
+					break;
+				case RawImageData.ImageType.Indexed:
+					this.imageInfo.Text =  $"Size: {rawImage.Width},{rawImage.Height}";
+					this.imageInfo.Text += $" colors:{rawImage.PaletteColorCount.ToString()}";
+					this.RenderPalette(rawImage);
+					this.imageRenderer.SetImageAndRepaint(rawImage);
+					paletteImageView.Visible   = true;
+					this.palletteGroup.Visible = true;
+					break;
+				case RawImageData.ImageType.TrueColor:
+					this.imageInfo.Text      =  $"Size: {rawImage.Width},{rawImage.Height}";
+					this.imageInfo.Text      += $" colors:not indexed!";
+					palletteGroup.Visible    =  false;
+					paletteImageView.Visible =  false;
+					this.imageRenderer.SetImageAndRepaint(rawImage);
+					break;
+				default:
+					throw new ArgumentOutOfRangeException();
 			}
 		}
 
@@ -80,7 +92,7 @@ namespace NmlSpriteTool {
 					x =  0;
 					y += size;
 				}
-				gfx.FillRectangle(Color.FromPremultipliedArgb(color), x, y, size, size);
+				gfx.FillRectangle(Color.FromArgb(color), x, y, size, size);
 			}
 			gfx.Flush();
 

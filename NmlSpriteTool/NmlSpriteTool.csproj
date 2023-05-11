@@ -9,4 +9,39 @@
         <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="13.1.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Images\frame1.png" />
+      <EmbeddedResource Include="Images\frame1.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Images\frame2.png" />
+      <EmbeddedResource Include="Images\frame2.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Images\frame3.png" />
+      <EmbeddedResource Include="Images\frame3.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Images\frame4.png" />
+      <EmbeddedResource Include="Images\frame4.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Images\frame5.png" />
+      <EmbeddedResource Include="Images\frame5.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Images\frame6.png" />
+      <EmbeddedResource Include="Images\frame6.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Images\frame7.png" />
+      <EmbeddedResource Include="Images\frame7.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Images\frame8.png" />
+      <EmbeddedResource Include="Images\frame8.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
 </Project>

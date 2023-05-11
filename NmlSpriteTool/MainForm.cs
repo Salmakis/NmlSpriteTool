@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using System.Net.Mime;
+using System.Threading;
+using System.Threading.Tasks;
 using Eto.Forms;
 using Eto.Drawing;
 using ImageMagick;
@@ -14,45 +16,52 @@ namespace NmlSpriteTool {
 		private static readonly string txtSelectADirectory = "<select a directory>";
 		private static readonly string txtSelectFolderWithImages = "Select Folder with images";
 		private static readonly string txtReload = "Reload";
-		
+
 		private ImageRenderer imageRenderer;
 
 		private ListBox imageFileList;
 		private ImageInfoPanel imageInfoPanel;
+		protected VehicleTab VehicleTab;
 
-		private static Dictionary<string, RawImageData> imageMap = new Dictionary<string, RawImageData>();
+		private readonly Dictionary<string, RawImageData> imageMap = new Dictionary<string, RawImageData>();
 
 		public MainForm()
 		{
 			Title       = "SpriteHelper";
 			MinimumSize = new Size(512, 480);
 
-	
-			this.imageInfoPanel  = new ImageInfoPanel();
+			this.imageInfoPanel = new ImageInfoPanel();
 
 			this.imageFileList  = new ListBox();
-			
-			imageFileList.Width = 200;
-			
+			imageFileList.Width = 300;
+
 			this.imageFileList.SelectedKeyChanged += OnImageFileListOnSelectedKeyChanged;
 			this.imageInfoPanel.ClearImage();
 
+			this.VehicleTab = new VehicleTab(imageMap);
+
+			TabControl tabControl = new TabControl();
+			DynamicLayout imageInfoTabContent = new DynamicLayout();
+			imageInfoTabContent.BeginHorizontal();
+			imageInfoTabContent.Add(imageFileList);
+			imageInfoTabContent.Add(imageInfoPanel);
+			imageInfoTabContent.EndHorizontal();
+
+			tabControl.Pages.Add(new TabPage(imageInfoTabContent) { Text = "Images", });
+			tabControl.Pages.Add(new TabPage(this.VehicleTab) {Text       = "Vehicles"});
+
 			DynamicLayout layout = new DynamicLayout();
-			// @formatter:off
 			layout.BeginVertical();
-				layout.BeginGroup(null);
-					layout.Add(CraeteProjectFolderSelection());
-				layout.EndGroup();
-				layout.BeginGroup("Images");
-					layout.BeginHorizontal();
-						layout.Add(imageFileList);
-						layout.Add(imageInfoPanel);
-					layout.EndHorizontal();
-				layout.EndGroup();
+			layout.BeginGroup(null);
+			layout.Add(CraeteProjectFolderSelection());
+			layout.EndGroup();
+			layout.BeginHorizontal();
+			layout.Add(tabControl);
+			layout.EndHorizontal();
 			layout.EndVertical();
-			// @formatter:on
 			this.Content = layout;
 		}
+		
 		private void OnImageFileListOnSelectedKeyChanged(object sender, EventArgs args)
 		{
 			string fullfilePath = this.workDirectory + "\\" + this.imageFileList.SelectedKey;
@@ -61,29 +70,23 @@ namespace NmlSpriteTool {
 				return;
 			}
 			RawImageData rawImage;
-			if (!imageMap.ContainsKey(fullfilePath))
-			{
-				try
-				{
-					rawImage = new RawImageData(new MagickImage(new FileInfo(fullfilePath)));
-				}
-				catch (Exception e)
-				{
-					this.imageInfoPanel.ClearImage();
-					MessageBox.Show("Image could not be loaded\n" + e.Message);
-					return;
-				}
-				imageMap.Add(fullfilePath, rawImage);
-			}
-			else
-			{
-				rawImage = imageMap[fullfilePath];
-			}
+			rawImage = imageMap[fullfilePath];
 			this.imageInfoPanel.SetImage(rawImage);
 		}
+		
 		private void LoadImagesFromWorkDir()
 		{
 			this.imageFileList.Items.Clear();
+			this.imageMap.Clear();
+			imageFileList.Enabled = false;
+			Application.Instance.InvokeAsync(DoLoadImageFiles);
+			imageFileList.Enabled = true;
+		}
+
+		[STAThread]
+		private async void DoLoadImageFiles()
+		{
+			
 			if (this.workDirectory == null)
 			{
 				return;
@@ -92,10 +95,41 @@ namespace NmlSpriteTool {
 			{
 				return;
 			}
-			foreach (string file in Directory.GetFiles(this.workDirectory, "*.png", SearchOption.AllDirectories))
+
+			ProgressBlocker blocker = new ProgressBlocker("Loading Images");
+			bool canceled = false;
+			blocker.Owner = this;
+			blocker.Closed += (sender, args) =>
 			{
-				this.imageFileList.Items.Add(file.Replace(this.workDirectory + "\\", ""));	
+				canceled = true;
+			};
+			blocker.ShowModalAsync();
+			int processed = 0;
+			var files = Directory.GetFiles(this.workDirectory, "*.png", SearchOption.AllDirectories);
+			foreach (string file in files)
+			{
+				blocker.PushProgress(file.Replace(this.workDirectory + "\\", ""), processed, files.Length);
+				await Task.Run(() =>
+				{
+					RawImageData rawImage;
+					try
+					{
+						rawImage = new RawImageData(new MagickImage(new FileInfo(file)));
+					}
+					catch (Exception e)
+					{
+						rawImage = RawImageData.CreateInvalid();
+					}
+					imageMap.Add(file, rawImage);
+				});
+				processed++;
+				this.imageFileList.Items.Add(file.Replace(this.workDirectory + "\\", ""));
+				if (canceled)
+				{
+					return;
+				}
 			}
+			blocker.Close();
 		}
 
 		private Control CraeteProjectFolderSelection()
